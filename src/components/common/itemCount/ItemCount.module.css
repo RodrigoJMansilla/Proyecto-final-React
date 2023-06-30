@@ -1,0 +1,47 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.subCont{
+    display: flex;
+    align-items: center;
+}
+
+.btnCard{
+    font-family: 'Roboto', sans-serif;
+    color: #790068;
+    background-color: white;
+    border: 0.5px solid #790068;
+    border-radius: 2px;
+    font-size: 1.3rem;
+    padding: 2px 5px 2px 5px;
+    margin: 2px 0px 5px 0px;
+    /* width: max-content; */
+}
+
+/* Clase experimental de los botones suma y resta */
+.btnCounter{
+    font-family: 'Roboto', sans-serif;
+    color: #790068;
+    background-color: white;
+    border: 0.5px solid #790068;
+    border-radius: 2px;
+    font-size: 1.3rem;
+    padding: 0 5px 0 5px;
+    margin: 2px 0px 5px 0px;
+}
+
+.contador{
+    font-family: 'Roboto', sans-serif;
+    padding: 0 2px 0 2px;
+}
+
+.btnCard:hover{
+    cursor: pointer;
+    background-color: #790068;
+    color: white;
+
+}
