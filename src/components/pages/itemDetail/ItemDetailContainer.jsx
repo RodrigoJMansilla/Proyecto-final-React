@@ -9,6 +9,16 @@ export const ItemDetailContainer = () => {
 
   const { id } = useParams()
 
+  const onAdd = (cantidad) => {
+    let data = {
+      ...productSelected,
+      quantity: cantidad,
+    };
+
+    console.log(data);
+    console.log("la cantidad del producto es:" + data.quantity)
+  };
+
 
   useEffect(() => {
     let productFind = products.find((product) => product.id === +id);
@@ -24,7 +34,7 @@ export const ItemDetailContainer = () => {
 
   console.log(productSelected)
 
-  return <ItemDetail productSelected={productSelected}  />;
+  return <ItemDetail productSelected={productSelected} onAdd={onAdd}  />;
 };
 
 

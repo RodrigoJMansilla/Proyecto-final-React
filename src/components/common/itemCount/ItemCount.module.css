@@ -1,8 +1,14 @@
 .container{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 15px;
     width: 80%;
+
+    /* background-color: #40376178; */
+    border-radius: 15px;
+
+    height: 250px;
 }
 
 .subCont{
@@ -14,7 +20,7 @@
     font-family: 'Roboto', sans-serif;
     color: #790068;
     background-color: white;
-    border: 0.5px solid #790068;
+    border: 0.5px none #403761;
     border-radius: 2px;
     font-size: 1.3rem;
     padding: 2px 5px 2px 5px;
@@ -27,7 +33,7 @@
     font-family: 'Roboto', sans-serif;
     color: #790068;
     background-color: white;
-    border: 0.5px solid #790068;
+    border: 0.5px solid #403761;
     border-radius: 2px;
     font-size: 1.3rem;
     padding: 0 5px 0 5px;
