@@ -1,0 +1,23 @@
+.cartCard{
+    display: flex;
+    width: 60%;
+    margin: 10px;
+    
+    /* justify-content: space-between; */
+
+    justify-content: center;
+    gap: 20px;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+.foto{
+    height: 100px;
+    text-align: center;
+}
+
+.texto{
+    font-family: 'Roboto', sans-serif;
+}

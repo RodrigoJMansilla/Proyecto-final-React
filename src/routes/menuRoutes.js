@@ -1,3 +1,4 @@
+import { CartContainer } from "../components/pages/cart/CartContainer";
 import { ItemDetailContainer } from "../components/pages/itemDetail/ItemDetailContainer";
 import { ItemListContainer } from "../components/pages/itemList/ItemListContainer";
 
@@ -16,5 +17,10 @@ export const menuRoutes = [
         id: "itemDetail",
         path:"/itemDetail/:id",
         Element: ItemDetailContainer 
+    },
+    {
+        id: "carrito",
+        path:"/carrito",
+        Element: CartContainer
     }
 ]

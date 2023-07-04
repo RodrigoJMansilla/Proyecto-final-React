@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { ItemDetail } from "./ItemDetail";
 import { products } from "../../../productsMock";
 import { useParams } from "react-router-dom";
+import { CartContext } from "../../../context/CartContext";
 
 
 export const ItemDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
+
+  const {addToCart, cart} = useContext(CartContext)
 
   const { id } = useParams()
 
@@ -15,8 +18,9 @@ export const ItemDetailContainer = () => {
       quantity: cantidad,
     };
 
-    console.log(data);
-    console.log("la cantidad del producto es:" + data.quantity)
+    addToCart(data)
+
+    console.log(cart)
   };
 
 
@@ -32,7 +36,7 @@ export const ItemDetailContainer = () => {
       .catch((err) => console.log(err));
   }, [id]);
 
-  console.log(productSelected)
+
 
   return <ItemDetail productSelected={productSelected} onAdd={onAdd}  />;
 };
