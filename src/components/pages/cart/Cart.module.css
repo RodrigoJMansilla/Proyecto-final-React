@@ -1,0 +1,11 @@
+.cart{
+    display: flex;
+}
+
+.contItems{
+    width:60%;
+}
+
+.contSum{
+    width: 40%;
+}

@@ -1,7 +1,6 @@
 .cartCard{
     display: flex;
-    width: 60%;
-    margin: 10px;
+    width: 100%;
     padding: 10px 10px 20px 10px;
 
     border-bottom: 1px solid gray;
