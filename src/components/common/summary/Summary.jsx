@@ -7,9 +7,9 @@ export const Summary = ({limpiar, getTotalPrice}) => {
   
     return (
     <div className={Styles.cont}>
-        <h2>
+        <h3>
             El Total de su carrito es: ${getTotalPrice()}
-        </h2>
+        </h3>
         <div className={Styles.contBot}>
             <button className={classNames} onClick={()=>limpiar()}>Limpiar Carrito</button>
             <button className={Styles.bot}>Finalizar Compra</button>
