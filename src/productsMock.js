@@ -21,7 +21,7 @@ export const products = [
         id: 3,
         title: "Martina",
         price: 19000,
-        stock: 6,
+        stock: 0,
         description: "Dos Chicas hechas con distintos tonos",
         category: "birome",
         img: "https://res.cloudinary.com/dkunurz6s/image/upload/v1686578492/WebArtista/Birome/2030_xx4x2w.jpg"

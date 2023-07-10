@@ -22,7 +22,9 @@ export const ProductCardDetail = ({elemento, onAdd}) => {
                 <p className={styles.precioCard}>
                     Stock: {elemento.stock}
                 </p>
-                <ItemCountContainer stock={elemento.stock} initial={1} onAdd={onAdd} />
+                { elemento.stock > 0 ?
+                    (<ItemCountContainer stock={elemento.stock} initial={1} onAdd={onAdd} />) : <h3>No hay stock en este momento</h3>
+                }
             </div>
 
         </div>  
