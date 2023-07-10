@@ -24,7 +24,24 @@ export const CartContainer = () => {
       })
     }
 
+    const eliminar = (id)=>{
+      Swal.fire({
+        title: '¿Seguro quieres eliminar el producto?',
+        showDenyButton: true,
+        showCancelButton: false,
+        confirmButtonText: 'Si, eliminar',
+        denyButtonText: `No, cancelar`,
+      }).then((result) => {
+        if (result.isConfirmed) {
+          removeById(id)
+          Swal.fire('Producto Eliminado', '', 'success')
+        } else if (result.isDenied) {
+          Swal.fire('El carrito no se modificó', '', 'info')
+        }
+      })
+    }
+
   return (
-    <Cart cart={cart} limpiar={limpiar}/>
+    <Cart cart={cart} limpiar={limpiar} eliminar={eliminar} />
   )
 }

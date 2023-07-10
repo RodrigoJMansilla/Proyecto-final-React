@@ -1,7 +1,7 @@
 import { Button } from "@mui/material"
 import styles from "./ProductCartCard.module.css"
 
-export const ProductCartCard = ({producto}) => {
+export const ProductCartCard = ({producto, eliminar}) => {
   return (
     <div className={styles.cartCard}>
       <div className={styles.contImg}>
@@ -18,7 +18,7 @@ export const ProductCartCard = ({producto}) => {
           <h4 className={styles.texto}>${producto.price * producto.quantity}</h4>
         </div>
         <div className={styles.subCont4}>
-          <Button  color="error" size="small" variant="contained">X</Button>
+          <Button  color="error" size="small" variant="contained" onClick={()=>eliminar(producto.id)}>X</Button>
         </div>
 
       </div>
