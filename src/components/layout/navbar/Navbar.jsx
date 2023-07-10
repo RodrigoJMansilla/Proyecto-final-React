@@ -3,8 +3,14 @@ import { Link, NavLink } from "react-router-dom"
 import { CartWidget } from "../../common/cartWidget/CartWidget"
 import styles from "./Navbar.module.css"
 import { menuNav } from "../../../routes/menuNav"
+import { useContext } from "react"
+import { CartContext } from "../../../context/CartContext"
 
-export const Navbar = ({contador}) => {
+export const Navbar = () => {
+
+  const {getTotalItems} = useContext(CartContext)
+  let totalItems = getTotalItems()
+
   return (
     <nav className={styles.navbar}>
         <div className={styles.subNav}>
@@ -21,7 +27,7 @@ export const Navbar = ({contador}) => {
           </div>
         </div>
         <Link to="/carrito">
-          <CartWidget contador={contador}/>
+          <CartWidget totalItems={totalItems} />
         </Link>
         
     </nav>

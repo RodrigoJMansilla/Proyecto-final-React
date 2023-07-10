@@ -18,7 +18,7 @@ export const Cart = ({cart, limpiar}) => {
         }
       </div>
       <div className={styles.contSum}>
-        <SummaryContainer />
+        <SummaryContainer limpiar={limpiar} />
       </div>
     </div>
 

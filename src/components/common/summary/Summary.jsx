@@ -1,7 +1,7 @@
 import Styles from "./Summary.module.css"
 
 
-export const Summary = ({clearCart, getTotalPrice}) => {
+export const Summary = ({limpiar, getTotalPrice}) => {
     
     const classNames=`${Styles.bot} ${Styles.botRed}`
   
@@ -11,7 +11,7 @@ export const Summary = ({clearCart, getTotalPrice}) => {
             El Total de su carrito es: ${getTotalPrice()}
         </h2>
         <div className={Styles.contBot}>
-            <button className={classNames} onClick={()=>clearCart()}>Limpiar Carrito</button>
+            <button className={classNames} onClick={()=>limpiar()}>Limpiar Carrito</button>
             <button className={Styles.bot}>Finalizar Compra</button>
         </div>
 

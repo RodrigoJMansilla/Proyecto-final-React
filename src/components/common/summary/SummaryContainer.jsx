@@ -3,11 +3,11 @@ import { Summary } from "./Summary"
 import { CartContext } from "../../../context/CartContext"
 
 
-export const SummaryContainer = () => {
+export const SummaryContainer = ({limpiar}) => {
 
-    const {clearCart, getTotalPrice}=useContext(CartContext)
+    const {getTotalPrice}=useContext(CartContext)
 
   return (
-    <Summary clearCart={clearCart} getTotalPrice={getTotalPrice} />
+    <Summary limpiar={limpiar} getTotalPrice={getTotalPrice} />
   )
 }
