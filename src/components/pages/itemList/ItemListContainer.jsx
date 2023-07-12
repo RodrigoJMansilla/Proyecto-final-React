@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { products } from "../../../productsMock";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
 import { ClockLoader } from "react-spinners";
@@ -52,6 +51,7 @@ export const ItemListContainer = () => {
           <ClockLoader color="#403761" size="100px" />
         </div>
       )}
+
     </div>
   );
 };

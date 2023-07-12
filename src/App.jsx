@@ -4,7 +4,6 @@ import { ItemListContainer } from "./components/pages/itemList/ItemListContainer
 import { Navbar } from "./components/layout/navbar/Navbar";
 import { ProductCardDetail } from "./components/common/productCardDetail/ProductCardDetail";
 import { ItemDetailContainer } from "./components/pages/itemDetail/ItemDetailContainer";
-import { products } from "./productsMock";
 import Layout from "./components/layout/Layout";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { menuRoutes } from "./routes/menuRoutes";
