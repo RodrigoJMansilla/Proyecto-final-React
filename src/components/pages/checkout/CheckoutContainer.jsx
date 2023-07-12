@@ -21,6 +21,7 @@ const CheckoutContainer = () => {
     initialValues: {
       name: "",
       email: "",
+      emailr:"",
       phone: "",
     },
 
@@ -62,13 +63,17 @@ const CheckoutContainer = () => {
     validationSchema: Yup.object({
       name: Yup.string()
         .required("Este campo es obligatorio")
-        .min(3, "Este campo debe contener al menos 3 caracteres"),
+        .min(3, "Debe contener al menos 3 caracteres"),
       email: Yup.string()
-        .email("Este campo no corresponde a un email valido")
+        .email("No corresponde a un email valido")
         .required("Este campo es obligatorio"),
+      emailr: Yup.string()
+      .email("No corresponde a un email valido")
+      .required("Este campo es obligatorio")
+      .oneOf([Yup.ref("email")], "Los email no coinciden"),
       phone: Yup.string()
         .required("Este campo es obligatorio")
-        .min(10, "El telefono no cumple los requisitos"),
+        .min(10, "Debe contener minimo 10 numeros para ser valido"),
     }),
   });
 

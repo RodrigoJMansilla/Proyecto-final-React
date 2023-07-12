@@ -27,6 +27,15 @@ export const Checkout = ({ handleSubmit, handleChange, errors }) => {
             error={errors.email ? true : false}
           />
           <TextField className="inputCheck"
+            label="Repetir Email"
+            variant="outlined"
+            name="emailr"
+            color="secondary"
+            onChange={handleChange}
+            helperText={errors.emailr}
+            error={errors.emailr ? true : false}
+          />
+          <TextField className="inputCheck"
             label="Telefono"
             variant="outlined"
             name="phone"

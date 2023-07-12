@@ -9,8 +9,15 @@ export const ProductCardDetail = ({elemento, onAdd}) => {
         </div>
         
         <div className={styles.segCont}>
-            <h4 className={styles.tituloCard}>{elemento.title}</h4>
-            <div className={styles.miniCont}>
+            <div className={styles.miniCont1}>
+                <h4 className={styles.tituloCard}>{elemento.title}</h4>
+                <p className={styles.descCard}>
+                        {elemento.description}
+                </p>
+            </div>
+
+            <div className={styles.miniCont2}>
+
                 <p className={styles.precioCard}>
                     Precio: ${elemento.price}
                 </p>

@@ -5,6 +5,7 @@
 
 .contItems{
     width:60%;
+    border-right: 1px solid gray;
 }
 
 .contSum{
