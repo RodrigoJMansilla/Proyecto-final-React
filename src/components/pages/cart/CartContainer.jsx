@@ -46,7 +46,7 @@ export const CartContainer = () => {
       {cart.length > 0 ? (
         <Cart cart={cart} limpiar={limpiar} eliminar={eliminar} />
       ) : (
-        <div style={{display:"flex", width:"100%", justifyContent:"center", padding:"50px"}}>
+        <div style={{display:"flex", width:"100%", justifyContent:"center", padding:"50px", minHeight:"83.2vh"}}>
           <h3>
             No hay productos en su carrito.<Link to="/">Ir a comprar</Link>
           </h3>

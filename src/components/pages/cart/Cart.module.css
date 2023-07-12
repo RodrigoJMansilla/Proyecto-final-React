@@ -1,5 +1,6 @@
 .cart{
     display: flex;
+    min-height: 83.2vh;
 }
 
 .contItems{

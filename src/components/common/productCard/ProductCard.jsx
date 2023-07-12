@@ -9,7 +9,7 @@ export const ProductCard = ({elemento}) => {
             <h4 className={styles.tituloCard}>{elemento.title}</h4>
             <div className={styles.miniCont}>
                 <p className={styles.precioCard}>
-                    Precio: ${elemento.price}
+                    ${elemento.price}
                 </p>
                 
                 <p className={styles.precioCard}>

@@ -5,6 +5,8 @@ import { useContext, useState } from "react";
 import { Checkout } from "./Checkout";
 import { CartContext } from "../../../context/CartContext";
 import { db } from "../../../firebaseConfig";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 
 const CheckoutContainer = () => {
   const { cart, getTotalPrice, clearCart } = useContext(CartContext);
@@ -12,6 +14,8 @@ const CheckoutContainer = () => {
   const [orderId, setOrderId] = useState(null);
 
   let totalPrice = getTotalPrice();
+
+  const navigate = useNavigate()
 
   const { handleSubmit, handleChange, errors } = useFormik({
     initialValues: {
@@ -28,7 +32,17 @@ const CheckoutContainer = () => {
       };
 
       let ordersCollection = collection(db, "orders");
-      addDoc(ordersCollection, order).then((res) => setOrderId(res.id));
+      addDoc(ordersCollection, order).then((res) => {
+        setOrderId(res.id)
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: `Su compra fue exitosa, el numero de comprobante es: ${res.id} `,
+          showConfirmButton: true,
+          confirmButtonText: 'Volver al inicio'
+        }).then( () => navigate("/"));
+      })
+      
 
       cart.forEach((product) => {
         updateDoc(doc(db, "products", product.id), {
@@ -36,7 +50,12 @@ const CheckoutContainer = () => {
         });
       });
 
+      
+
+
+      
       clearCart();
+      
     },
 
     validateOnChange: false,
@@ -55,15 +74,11 @@ const CheckoutContainer = () => {
 
   return (
     <div>
-      {orderId ? (
-        <h1>Su compra fue exitosa, el numero de comprobante es: {orderId}</h1>
-      ) : (
         <Checkout
           handleSubmit={handleSubmit}
           handleChange={handleChange}
           errors={errors}
         />
-      )}
     </div>
   );
 };

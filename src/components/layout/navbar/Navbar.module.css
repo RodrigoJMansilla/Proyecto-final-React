@@ -1,50 +1,46 @@
-h3{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
-.navbar{
-    padding: 0 2% 0 2%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    background-color: #403761;
+.navbar {
+  padding: 0 2% 0 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #403761;
 }
 
-.subNav{
-    display: flex;
-    justify-content: flex-start;
-    gap: 60px;
-    width: 80%;
+.contenedorBotones {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  width: 40%;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  padding: 2px 0;
 }
 
-.contenedorBotones{
-    display: flex;
-    gap: 15px;
-    width: 65%;
-    padding-top: 10px;
+.botones {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  background: none;
+  color: white;
 }
 
-.botones{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    text-decoration: none;
-    border: none;
-    background: none;
-    color: white;
+.botones:hover {
+  cursor: pointer;
+  color: #a022c7;
 }
 
-.botones:hover{
-    cursor: pointer;
-    color: #A022C7;
-}
-
-.logo{
-    justify-self: flex-start ;
-    border: solid 2px white;
-    border-radius: 8px;
-    padding: 6px;
-    color: white;
+.logo {
+  justify-self: flex-start;
+  border: solid 2px white;
+  border-radius: 8px;
+  padding: 6px;
+  color: white;
 }

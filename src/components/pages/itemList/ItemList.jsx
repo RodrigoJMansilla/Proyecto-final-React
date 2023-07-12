@@ -8,6 +8,7 @@ export const ItemList = ({ items }) => {
         flexWrap: "wrap",
         gap: "15px",
         justifyContent: "space-around",
+        minHeight:"83.2vh"        
       }}
     >
       { 
