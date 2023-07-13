@@ -28,6 +28,18 @@
     /* width: max-content; */
 }
 
+.btnCardOp{
+    min-width: 25px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #4037618b;
+    border: 0.5px none #403761;
+    border-radius: 12px;
+    font-size: 1rem;
+    padding: 2px 5px 2px 5px;
+    margin: 2px 0px 5px 0px;
+}
+
 /* Clase experimental de los botones suma y resta */
 .btnCounter{
     font-family: 'Roboto', sans-serif;
@@ -43,11 +55,18 @@
 .contador{
     font-family: 'Roboto', sans-serif;
     padding: 0 2px 0 2px;
+    color: #403761;
+    font-size: 1.3rem;
 }
 
 .btnCard:hover{
     cursor: pointer;
     background-color: #790068;
     color: white;
+}
 
+.btnCardOp:hover{
+    cursor: pointer;
+    background-color: #790068;
+    color: white;
 }

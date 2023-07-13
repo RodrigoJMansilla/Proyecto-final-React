@@ -6,11 +6,11 @@ export const ItemCount = ({ count, decrement, increment, onAdd }) => {
     <>
       <div className={styles.container}>
         <div className={styles.subCont}>
-          <button className={styles.btnCard}  onClick={decrement}>-</button>
+          <button className={styles.btnCardOp}  onClick={decrement}>-</button>
           <span className={styles.contador}>{count}</span>
-          <button className={styles.btnCard} onClick={increment}>+</button>
+          <button className={styles.btnCardOp} onClick={increment}>+</button>
         </div>
-        <button className={styles.btnCard} onClick={() => onAdd(count)}>Agregar al carrito</button>
+        <button className={styles.btnCardOp} onClick={() => onAdd(count)}>Agregar al carrito</button>
       </div>
     </>
   );

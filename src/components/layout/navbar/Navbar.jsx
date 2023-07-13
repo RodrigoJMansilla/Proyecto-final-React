@@ -12,7 +12,7 @@ export const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <Link to="/">
-        <h3 className={styles.logo}>Logo</h3>
+        <h3 className={styles.logo}>Sessa</h3>
       </Link>
       <div className={styles.contenedorBotones}>
         {menuNav.map(({ id, path, title }) => (

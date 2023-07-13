@@ -52,6 +52,7 @@ export const ItemDetailContainer = () => {
             display: "flex",
             justifyContent: "center",
             padding: "50px",
+            minHeight:"83.2vh"
           }}
         >
           <ClockLoader color="#403761" size="100px" />
