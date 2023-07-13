@@ -7,11 +7,10 @@ import { collection, doc, getDoc } from "firebase/firestore";
 import { db } from "../../../firebaseConfig";
 import { ClockLoader } from "react-spinners";
 
-
 export const ItemDetailContainer = () => {
   const [productSelected, setProductSelected] = useState({});
 
-  const { addToCart, cart } = useContext(CartContext);
+  const { addToCart } = useContext(CartContext);
 
   const { id } = useParams();
 
@@ -40,7 +39,6 @@ export const ItemDetailContainer = () => {
     });
   }, [id]);
 
-  
   return (
     <>
       {productSelected.id ? (
@@ -52,7 +50,7 @@ export const ItemDetailContainer = () => {
             display: "flex",
             justifyContent: "center",
             padding: "50px",
-            minHeight:"83.2vh"
+            minHeight: "83.2vh",
           }}
         >
           <ClockLoader color="#403761" size="100px" />
@@ -61,5 +59,3 @@ export const ItemDetailContainer = () => {
     </>
   );
 };
-
-

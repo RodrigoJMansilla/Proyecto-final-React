@@ -1,58 +1,57 @@
-.cartCard{
-    display: flex;
-    width: 100%;
-    padding: 10px 10px 20px 10px;
+.cartCard {
+  display: flex;
+  width: 100%;
+  padding: 10px 10px 20px 10px;
 
-    border-bottom: 1px solid gray;
-    
-    /* justify-content: space-between; */
+  border-bottom: 1px solid gray;
 
-    justify-content: center;
-    gap: 20px;
+  /* justify-content: space-between; */
 
-    align-items: center;
+  justify-content: center;
+  gap: 20px;
 
-    text-align: center;
+  align-items: center;
+
+  text-align: center;
 }
 
-.contImg{
-    width:150px;
-    display: flex;
-    justify-content: center;
+.contImg {
+  width: 150px;
+  display: flex;
+  justify-content: center;
 }
 
-.foto{
-    height: 100px;
-    text-align: center;
+.foto {
+  height: 100px;
+  text-align: center;
 }
 
-.subCont{
-    flex-grow: 1;
-    display: flex;
+.subCont {
+  flex-grow: 1;
+  display: flex;
 }
 
-.subCont1{
-    text-align: center;
-    width:40%
+.subCont1 {
+  text-align: center;
+  width: 40%;
 }
 
-.subCont2{
-    text-align: center;
-    width: 20%;
+.subCont2 {
+  text-align: center;
+  width: 20%;
 }
 
-.subCont3{
-    text-align: center;
-    width: 20%;
+.subCont3 {
+  text-align: center;
+  width: 20%;
 }
 
-.subCont4{
-    text-align: center; 
-    width:10px;
+.subCont4 {
+  text-align: center;
+  width: 10px;
 }
 
-
-.texto{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+.texto {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }

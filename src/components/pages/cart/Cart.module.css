@@ -1,13 +1,13 @@
-.cart{
-    display: flex;
-    min-height: 83.2vh;
+.cart {
+  display: flex;
+  min-height: 83.2vh;
 }
 
-.contItems{
-    width:60%;
-    border-right: 1px solid gray;
+.contItems {
+  width: 60%;
+  border-right: 1px solid gray;
 }
 
-.contSum{
-    width: 40%;
+.contSum {
+  width: 40%;
 }

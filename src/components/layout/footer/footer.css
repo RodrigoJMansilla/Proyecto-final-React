@@ -1,23 +1,23 @@
-.contFooter{
-    padding: 0 2% 0 2%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-    background-color: #403761;
+.contFooter {
+  padding: 0 2% 0 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: #403761;
 }
 
-.contFooter h3{
-    font-family: "Roboto", sans-serif;
-    color:white;
+.contFooter h3 {
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
 
-.contRedes{
-    display:flex;
-    justify-content: center;
-    gap:10px;
+.contRedes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
-.logos{
-    color:white;
+.logos {
+  color: white;
 }

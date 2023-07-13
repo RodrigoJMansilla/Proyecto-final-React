@@ -8,14 +8,12 @@ export const ItemList = ({ items }) => {
         flexWrap: "wrap",
         gap: "15px",
         justifyContent: "space-around",
-        minHeight:"83.2vh"        
+        minHeight: "83.2vh",
       }}
     >
-      { 
-		items.map((elemento) => {
-			return <ProductCard key={elemento.id} elemento={elemento} />;
-		})
-	  }
+      {items.map((elemento) => {
+        return <ProductCard key={elemento.id} elemento={elemento} />;
+      })}
     </div>
   );
 };

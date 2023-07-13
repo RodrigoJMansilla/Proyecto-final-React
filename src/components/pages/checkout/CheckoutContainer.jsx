@@ -11,17 +11,18 @@ import { useNavigate } from "react-router-dom";
 const CheckoutContainer = () => {
   const { cart, getTotalPrice, clearCart } = useContext(CartContext);
 
+  //si bien de momento opte por renderizar la respuesta directamente en el manejo de la promesa que devuelve el metodo fire() de sweet alert y no utilizar el estado "orderId" lo voy a dejar disponible para seguir trabajando en el proyecto
   const [orderId, setOrderId] = useState(null);
 
   let totalPrice = getTotalPrice();
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const { handleSubmit, handleChange, errors } = useFormik({
     initialValues: {
       name: "",
       email: "",
-      emailr:"",
+      emailr: "",
       phone: "",
     },
 
@@ -34,16 +35,15 @@ const CheckoutContainer = () => {
 
       let ordersCollection = collection(db, "orders");
       addDoc(ordersCollection, order).then((res) => {
-        setOrderId(res.id)
+        setOrderId(res.id);
         Swal.fire({
           position: "center",
           icon: "success",
           title: `Su compra fue exitosa, el numero de comprobante es: ${res.id} `,
           showConfirmButton: true,
-          confirmButtonText: 'Volver al inicio'
-        }).then( () => navigate("/"));
-      })
-      
+          confirmButtonText: "Volver al inicio",
+        }).then(() => navigate("/"));
+      });
 
       cart.forEach((product) => {
         updateDoc(doc(db, "products", product.id), {
@@ -51,12 +51,7 @@ const CheckoutContainer = () => {
         });
       });
 
-      
-
-
-      
       clearCart();
-      
     },
 
     validateOnChange: false,
@@ -68,9 +63,9 @@ const CheckoutContainer = () => {
         .email("No corresponde a un email valido")
         .required("Este campo es obligatorio"),
       emailr: Yup.string()
-      .email("No corresponde a un email valido")
-      .required("Este campo es obligatorio")
-      .oneOf([Yup.ref("email")], "Los email no coinciden"),
+        .email("No corresponde a un email valido")
+        .required("Este campo es obligatorio")
+        .oneOf([Yup.ref("email")], "Los email no coinciden"),
       phone: Yup.string()
         .required("Este campo es obligatorio")
         .min(10, "Debe contener minimo 10 numeros para ser valido"),
@@ -79,11 +74,11 @@ const CheckoutContainer = () => {
 
   return (
     <div>
-        <Checkout
-          handleSubmit={handleSubmit}
-          handleChange={handleChange}
-          errors={errors}
-        />
+      <Checkout
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+        errors={errors}
+      />
     </div>
   );
 };

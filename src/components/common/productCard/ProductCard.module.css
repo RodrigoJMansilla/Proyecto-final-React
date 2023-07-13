@@ -1,75 +1,71 @@
-.card{
-    width: 330px;
-    height: 430px;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 20px;
-    text-align: center;
-    transition: all 0.25s;
-
+.card {
+  width: 330px;
+  height: 430px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
 }
 
-.imgCard{
-    /* width: 330px; */
-    height: 300px;
+.imgCard {
+  /* width: 330px; */
+  height: 300px;
 }
 
-.card:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+.card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
-.segCont{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 130px;
+.segCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 130px;
 }
 
-.tituloCard{
-    font-family: 'Roboto', sans-serif;
-    color:grey;
-    font-size: 1.4rem;
-    font-weight: 300;
-    text-align: center;
+.tituloCard {
+  font-family: "Roboto", sans-serif;
+  color: grey;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
 }
 
-.miniCont{
-    display:flex;
-    justify-content: space-around;
-    align-content: center;
-    width: 100%;
+.miniCont {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
 }
 
-
-.precioCard{
-    font-family: 'Roboto', sans-serif;
-    padding: 0 1rem;
-    font-size: 1rem;
-    color:grey;
-    font-weight: 300;
-    width: 50%;
-    /* height: 35.84px; */
+.precioCard {
+  font-family: "Roboto", sans-serif;
+  padding: 0 1rem;
+  font-size: 1rem;
+  color: grey;
+  font-weight: 300;
+  width: 50%;
+  /* height: 35.84px; */
 }
 
-
-.btnCard{
-    font-family: 'Roboto', sans-serif;
-    color: #790068;
-    background-color: white;
-    border: 0.5px solid #790068;
-    border-radius: 2px;
-    font-size: 1.3rem;
-    padding: 2px 5px 2px 5px;
-    margin: 2px 0px 5px 0px;
-    width: max-content;
+.btnCard {
+  font-family: "Roboto", sans-serif;
+  color: #790068;
+  background-color: white;
+  border: 0.5px solid #790068;
+  border-radius: 2px;
+  font-size: 1.3rem;
+  padding: 2px 5px 2px 5px;
+  margin: 2px 0px 5px 0px;
+  width: max-content;
 }
 
-.btnCard:hover{
-    cursor: pointer;
-    background-color: #790068;
-    color: white;
-
+.btnCard:hover {
+  cursor: pointer;
+  background-color: #790068;
+  color: white;
 }
